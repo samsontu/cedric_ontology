@@ -1,0 +1,27 @@
+# PURL configuration for http://purl.obolibrary.org/obo/cedric
+
+idspace: CEDRIC
+base_url: /obo/cedric
+
+products:
+- cedric.owl: https://raw.githubusercontent.com/samsontu/cedric_ontology/master/cedric.owl
+- cedric.obo: https://raw.githubusercontent.com/samsontu/cedric_ontology/master/cedric.obo
+
+term_browser: ontobee
+example_terms:
+- CEDRIC_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/samsontu/cedric_ontology/v
+
+- prefix: /tracker/
+  replacement: https://github.com/samsontu/cedric_ontology/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/CEDRIC?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/samsontu/cedric_ontology/master/
