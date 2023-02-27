@@ -1,0 +1,12 @@
+id: cedric
+title: CEDRIC ontology
+github_org: samsontu
+repo: cedric_ontology
+git_main_branch: master
+release_artefacts:
+  - full
+primary_release: full
+export_formats:
+  - owl
+  - json
+robot_java_args: "-Xmx8G"

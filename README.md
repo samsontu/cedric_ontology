@@ -4,17 +4,16 @@
 
 Description: None
 
-More information can be found at http://obofoundry.org/ontology/cedric
+More information can be found at [to be determined]
 
 ## Versions
 
 ### Stable release versions
 
-The latest version of the ontology can always be found at:
+The latest release version of the ontology can always be found at:
 
-http://purl.obolibrary.org/obo/cedric.owl
+https://raw.githubusercontent.com/samsontu/cedric_ontology/master/cedric.owl
 
-(note this will not show up until the request has been approved by obofoundry.org)
 
 ### Editors' version
 

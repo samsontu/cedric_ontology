@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/tu/ontologies/2023/1/untitled-ontology-92/"
+     xml:base="http://www.semanticweb.org/tu/ontologies/2023/1/untitled-ontology-92/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:CEDRIC="http://www.semanticweb.org/CEDRIC/"
+     xmlns:CEDRICExamples="http://www.semanticweb.org/CEDRICExamples/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/CEDRICExamples">
+        <owl:imports rdf:resource="http://www.semanticweb.org/CEDRIC"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRICExamples/hasResearcher -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CEDRICExamples/hasResearcher"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRIC/ConceptIDCollection001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRIC/ConceptIDCollection001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/DatatypeCollection"/>
+        <CEDRIC:attribute>concept_id</CEDRIC:attribute>
+        <CEDRIC:hasDatatypeCollectionElement rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">37398642</CEDRIC:hasDatatypeCollectionElement>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRIC/DataElementCollectionSelection_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRIC/DataElementCollectionSelection_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/DataElementCollectionSelection"/>
+        <CEDRIC:hasCollection rdf:resource="http://www.semanticweb.org/CEDRIC/birthdayCollection"/>
+        <CEDRIC:hasDataElementSelection rdf:resource="http://www.semanticweb.org/CEDRIC/dayOfBirthDataElementSelection"/>
+        <CEDRIC:hasDataElementSelection rdf:resource="http://www.semanticweb.org/CEDRIC/monthOfBirthDataElementSelection"/>
+        <CEDRIC:hasDataElementSelection rdf:resource="http://www.semanticweb.org/CEDRIC/yearOfBirthDataElementCollection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRIC/DataElement_13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRIC/DataElement_13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/DataElement"/>
+        <CEDRIC:hasPrivacyLevel rdf:resource="http://www.semanticweb.org/CEDRIC/D-PII"/>
+        <CEDRIC:attribute></CEDRIC:attribute>
+        <CEDRIC:table>Person</CEDRIC:table>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRIC/DataRequest_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRIC/DataRequest_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/DataRequest"/>
+        <CEDRIC:hasRequestedData rdf:resource="http://www.semanticweb.org/CEDRIC/DataSet_5"/>
+        <CEDRIC:hasRequestor rdf:resource="http://www.semanticweb.org/CEDRICExamples/AnupamaGinige"/>
+        <CEDRIC:hasResearchTeam rdf:resource="http://www.semanticweb.org/CEDRICExamples/CEDRIC"/>
+        <CEDRIC:Access_End_Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-31T09:00:00</CEDRIC:Access_End_Date>
+        <CEDRIC:Access_Start_Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-04-01T09:00:00</CEDRIC:Access_Start_Date>
+        <CEDRIC:Data_Period_End_Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-12-31T09:00:00</CEDRIC:Data_Period_End_Date>
+        <CEDRIC:Data_Period_Start_Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-01T09:00:00</CEDRIC:Data_Period_Start_Date>
+        <CEDRIC:Request_Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-02-01T09:00:00</CEDRIC:Request_Date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRIC/DataSet_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRIC/DataSet_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/DataSetSpec"/>
+        <CEDRIC:hasData rdf:resource="http://www.semanticweb.org/CEDRICExamples/EHRDataDRUG_EXPOSURE_001"/>
+        <CEDRIC:hasData rdf:resource="http://www.semanticweb.org/CEDRICExamples/EHRDataMEASUREMENT_001"/>
+        <CEDRIC:hasData rdf:resource="http://www.semanticweb.org/CEDRICExamples/EHRDataNOTE_001"/>
+        <CEDRIC:hasData rdf:resource="http://www.semanticweb.org/CEDRICExamples/EHRDataPROVIDER_001"/>
+        <CEDRIC:hasData rdf:resource="http://www.semanticweb.org/CEDRICExamples/EHRDataVISIT_OCCURRENCE_001"/>
+        <CEDRIC:hasStatus rdf:resource="http://www.semanticweb.org/CEDRIC/Request"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRIC/TimeInterval20180101To20221231 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRIC/TimeInterval20180101To20221231">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/TimeInterval"/>
+        <CEDRIC:hasLowerBound rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-01T00:00:00</CEDRIC:hasLowerBound>
+        <CEDRIC:hasUpperBound rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-12-31T00:00:00</CEDRIC:hasUpperBound>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRIC/measurement_time_selection_12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRIC/measurement_time_selection_12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/DataElementSelection"/>
+        <CEDRIC:hasDataElement rdf:resource="http://www.semanticweb.org/CEDRIC/measurement_time"/>
+        <CEDRIC:hasFilterRule rdf:resource="http://www.semanticweb.org/CEDRICExamples/TimeIntervalFilter001"/>
+        <CEDRIC:table>Measurment</CEDRIC:table>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRIC/membersOfSet001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRIC/membersOfSet001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/ComparisonFilter"/>
+        <CEDRIC:hasCollection rdf:resource="http://www.semanticweb.org/CEDRIC/ConceptIDCollection001"/>
+        <CEDRIC:hasLogicalOperator rdf:resource="http://www.semanticweb.org/CEDRIC/isMEMBER"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRIC/94305 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRIC/94305">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/Address"/>
+        <CEDRIC:hasCity>Stanford</CEDRIC:hasCity>
+        <CEDRIC:hasCountry>USA</CEDRIC:hasCountry>
+        <CEDRIC:hasPostalCode>94305</CEDRIC:hasPostalCode>
+        <CEDRIC:hasState>CA</CEDRIC:hasState>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRICExamples/AnupamaGinige -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRICExamples/AnupamaGinige">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/Person"/>
+        <CEDRIC:hasAffiliation rdf:resource="http://www.semanticweb.org/CEDRICExamples/WestSydneyUniversity"/>
+        <CEDRIC:hasResearcherLevel rdf:resource="http://www.semanticweb.org/CEDRIC/SeniorResearcher"/>
+        <CEDRIC:hasFName>Anupama</CEDRIC:hasFName>
+        <CEDRIC:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000000</CEDRIC:hasID>
+        <CEDRIC:hasLName>Ginige</CEDRIC:hasLName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRICExamples/CEDRIC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRICExamples/CEDRIC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/ResearchTeam"/>
+        <CEDRICExamples:hasResearcher rdf:resource="http://www.semanticweb.org/CEDRICExamples/AnupamaGinige"/>
+        <CEDRICExamples:hasResearcher rdf:resource="http://www.semanticweb.org/CEDRICExamples/SamsonTu"/>
+        <CEDRIC:hasID>3000000</CEDRIC:hasID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRICExamples/NOTEnote_date_001 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/CEDRICExamples/NOTEnote_date_001">
+        <CEDRIC:hasFilterRule rdf:resource="http://www.semanticweb.org/CEDRICExamples/TimeIntervalFilter001"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRICExamples/PathologyRecomDeviationAnalysisProject -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRICExamples/PathologyRecomDeviationAnalysisProject">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/Project"/>
+        <CEDRIC:hasDataRequest rdf:resource="http://www.semanticweb.org/CEDRIC/DataRequest_1"/>
+        <CEDRIC:hasObjective>In the last five years, how closely do the clinicians follow the Pathology recommendations associated with abnormal measurements in the Observations and Transplant units of the Liverpool hospital</CEDRIC:hasObjective>
+        <CEDRIC:hasObjective>Pathology Results for episodes of care
+Pathology Notes for episodes of care
+The episode of Care Details including observations and medications
+Notes associated with the Episodes of care</CEDRIC:hasObjective>
+        <terms:description>Analysis of Deviations from Pathology Recommendations</terms:description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRICExamples/SamsonTu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRICExamples/SamsonTu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/Person"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/CEDRIC/hasRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/CEDRIC/ResearcherRole"/>
+            </owl:Restriction>
+        </rdf:type>
+        <CEDRIC:hasAffiliation rdf:resource="http://www.semanticweb.org/CEDRICExamples/StanfordUniversity"/>
+        <CEDRIC:hasResearcherLevel rdf:resource="http://www.semanticweb.org/CEDRIC/SeniorResearcher"/>
+        <CEDRIC:hasFName>Samson</CEDRIC:hasFName>
+        <CEDRIC:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000000</CEDRIC:hasID>
+        <CEDRIC:hasLName>Tu</CEDRIC:hasLName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRICExamples/StanfordUniversity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRICExamples/StanfordUniversity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/AcademicInstitution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRICExamples/TimeIntervalFilter001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRICExamples/TimeIntervalFilter001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/ComparisonFilter"/>
+        <CEDRIC:hasPeriod rdf:resource="http://www.semanticweb.org/CEDRIC/TimeInterval20180101To20221231"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRICExamples/WestSydneyUniversity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRICExamples/WestSydneyUniversity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/AcademicInstitution"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
