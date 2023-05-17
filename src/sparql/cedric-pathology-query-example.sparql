@@ -1,0 +1,89 @@
+PREFIX OMOP: <http://www.semanticweb.org/CEDRIC/OMOP/>
+PREFIX CEDRIC: <http://www.semanticweb.org/CEDRIC/>
+
+SELECT ?person_id
+	?measurement_id
+	?measurement_concept_id
+	?measurement_date
+	?measurement_time
+	?value_as_number
+	?value_as_concept_id
+	?unit_concept_id
+	?range_low
+	?range_high
+	?provider_id
+	?visit_occurrence_id
+WHERE {
+  ?m a OMOP:MEASUREMENT .
+  ?n a OMOP:NOTE .
+  ?v a OMOP:VISIT_OCCURRENCE .
+  ?p a OMOP:PROVIDER .
+  ?d a OMOP:DRUG_EXPOSURE .
+  ?m OMOP:person_id ?person_id ;
+	 OMOP:measurement_id ?measurement_id ;
+	 OMOP:measurement_concept_id ?measurement_concept_id ;
+	 OMOP:measurement_date ?measurement_date ;
+	 OMOP:measurement_time ?measurement_time ;
+	 OMOP:value_as_number ?value_as_number ;
+	 OMOP:value_as_concept_id ?value_as_concept_id ;
+	 OMOP:unit_concept_id ?unit_concept_id ;
+	 OMOP:range_low ?range_low ;
+	 OMOP:range_high ?range_high ;
+	 OMOP:provider_id ?provider_id ;
+	 OMOP:visit_occurrence_id ?visit_occurrence_id .
+  ?n OMOP:person_id ?person_id;
+  	 OMOP:visit_occurrence_id ?visit_occurrence_id ;
+  	 OMOP:note_date ?note_date ;
+  	 OMOP:provider_id ?provider_id .
+  ?v OMOP:person_id ?person_id ;
+  	 OMOP:visit_occurrence_id ?visit_occurrence_id ;
+  	 OMOP:visit_start_date ?visit_start_date;
+  	 OMOP:visit_end_date ?visit_end_date ;
+  	 OMOP:care_site_id ?care_site_id .
+  ?p OMOP:care_site_id ?care_site_id ;
+     OMOP:provider_id ?provider_id .
+  ?d OMOP:person_id ?person_id ;
+  	 OMOP:visit_occurrence_id ?visit_occurrence_id ;
+  	 OMOP:drug_exposure_start_date ?exposure_start_date ;
+  	 OMOP:drug_exposure_end_date ?exposure_end_date .
+FILTER (?measurement_concept_id = 'urine_test_conceptId' ||
+		?measurement_date >= '01/01/2018' ||
+		?measurement date <= '31/12/2022' ||
+		?visit_start_date >= '01/01/2018' ||
+		?visit_end_date <= '31/12/2022' || 
+		?care_site_id = 'LiverpoolHospitalICU'	|| 
+		?exposure_start_date >= '01/01/2018' 	||
+		?exposure_end_date <= '31/12/2022'	||
+		?note_date >= '01/01/2018' 	||
+		?note_date <= '31/12/2022'
+}
+
+
+?person_id
+?note_date
+?note_type_concept_id
+?note_class_concept_id
+?note_title
+?note_text
+?provider_id
+?visit_occurrence_id
+?person_id
+?visit_occurrence_id
+?visit_start_date
+?visit_end_date
+?provider_id
+?care_site_id
+?provider_id
+?speciality_concept_id
+?care_site_id
+?person_id
+?drug_concept_id
+?exposure_start_date
+?exposure_end_date
+?drug_type_concept_id
+?stop_reason
+?quantity
+?route_concept_id
+?refills
+?provider_id
+?visit_occurrence_id

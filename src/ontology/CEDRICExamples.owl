@@ -3,9 +3,11 @@
      xml:base="http://www.semanticweb.org/tu/ontologies/2023/1/untitled-ontology-92/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:www="http://www.semanticweb.org/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:CEDRIC="http://www.semanticweb.org/CEDRIC/"
      xmlns:CEDRICExamples="http://www.semanticweb.org/CEDRICExamples/">
@@ -35,11 +37,41 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRIC/ComparisonOperator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CEDRIC/ComparisonOperator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CEDRIC/ValueSet"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Individuals
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRIC/CaseSiteSpec -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRIC/CaseSiteSpec">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/ComparisonFilter"/>
+        <CEDRIC:hasComparisonOperator rdf:resource="http://www.semanticweb.org/CEDRIC/EQ"/>
+        <CEDRIC:hasDataElement rdf:resource="http://www.semanticweb.org/CEDRIC/care_site_id"/>
+        <CEDRIC:value>LiverpoolHospitalICU</CEDRIC:value>
+    </owl:NamedIndividual>
     
 
 
@@ -106,6 +138,62 @@
     
 
 
+    <!-- http://www.semanticweb.org/CEDRIC/DrugExposureEndDate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRIC/DrugExposureEndDate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/ComparisonFilter"/>
+        <CEDRIC:hasComparisonOperator rdf:resource="http://www.semanticweb.org/CEDRIC/LessThanOrEQ"/>
+        <CEDRIC:hasDataElement rdf:resource="http://www.semanticweb.org/CEDRIC/drug_exposure_end_date"/>
+        <CEDRIC:value>2022-12-31T00:00:00</CEDRIC:value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRIC/DrugExposureStartDate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRIC/DrugExposureStartDate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/ComparisonFilter"/>
+        <CEDRIC:hasComparisonOperator rdf:resource="http://www.semanticweb.org/CEDRIC/GreaterThanOrEQ"/>
+        <CEDRIC:hasDataElement rdf:resource="http://www.semanticweb.org/CEDRIC/drug_exposure_start_date"/>
+        <CEDRIC:value>2018-01-01T00:00:00</CEDRIC:value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRIC/EQ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRIC/EQ">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/ComparisonOperator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRIC/GreaterThanOrEQ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRIC/GreaterThanOrEQ">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/ComparisonOperator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRIC/LessThanOrEQ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRIC/LessThanOrEQ">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/ComparisonOperator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRIC/NoteDateInterval -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRIC/NoteDateInterval">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/ComparisonFilter"/>
+        <CEDRIC:hasDataElement rdf:resource="http://www.semanticweb.org/CEDRIC/TimeInterval20180101To20221231"/>
+        <CEDRIC:hasPeriod rdf:resource="http://www.semanticweb.org/CEDRIC/TimeInterval20180101To20221231"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/CEDRIC/TimeInterval20180101To20221231 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRIC/TimeInterval20180101To20221231">
@@ -116,12 +204,50 @@
     
 
 
+    <!-- http://www.semanticweb.org/CEDRIC/TimePoint20180101 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRIC/TimePoint20180101">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRIC/TimePoint20221231 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRIC/TimePoint20221231">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRIC/VisitEndDate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRIC/VisitEndDate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/ComparisonFilter"/>
+        <CEDRIC:hasComparisonOperator rdf:resource="http://www.semanticweb.org/CEDRIC/LessThanOrEQ"/>
+        <CEDRIC:hasDataElement rdf:resource="http://www.semanticweb.org/CEDRIC/visit_end_date"/>
+        <CEDRIC:value>2022-12-31T00:00:00</CEDRIC:value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRIC/VisitStartDate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRIC/VisitStartDate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/ComparisonFilter"/>
+        <CEDRIC:hasComparisonOperator rdf:resource="http://www.semanticweb.org/CEDRIC/GreaterThanOrEQ"/>
+        <CEDRIC:hasDataElement rdf:resource="http://www.semanticweb.org/CEDRIC/visit_start_date"/>
+        <CEDRIC:value>2018-01-01T00:00:00</CEDRIC:value>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/CEDRIC/measurement_time_selection_12 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRIC/measurement_time_selection_12">
         <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/DataElementSelection"/>
         <CEDRIC:hasDataElement rdf:resource="http://www.semanticweb.org/CEDRIC/measurement_time"/>
-        <CEDRIC:hasFilterRule rdf:resource="http://www.semanticweb.org/CEDRICExamples/TimeIntervalFilter001"/>
+        <CEDRIC:hasFilterRule rdf:resource="http://www.semanticweb.org/CEDRICExamples/MeasurementDateFilter"/>
         <CEDRIC:table>Measurment</CEDRIC:table>
     </owl:NamedIndividual>
     
@@ -173,10 +299,60 @@
     
 
 
+    <!-- http://www.semanticweb.org/CEDRICExamples/EHRDataDRUG_EXPOSURE_001 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/CEDRICExamples/EHRDataDRUG_EXPOSURE_001">
+        <www:hasJoiningAttribute rdf:resource="http://www.semanticweb.org/CEDRIC/person_id"/>
+        <www:hasJoiningAttribute rdf:resource="http://www.semanticweb.org/CEDRIC/visit_occurrence_id"/>
+        <CEDRIC:hasFilterRule rdf:resource="http://www.semanticweb.org/CEDRIC/DrugExposureEndDate"/>
+        <CEDRIC:hasFilterRule rdf:resource="http://www.semanticweb.org/CEDRIC/DrugExposureStartDate"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRICExamples/EHRDataMEASUREMENT_001 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/CEDRICExamples/EHRDataMEASUREMENT_001">
+        <CEDRIC:hasFilterRule rdf:resource="http://www.semanticweb.org/CEDRICExamples/MeasurementDateFilter"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRICExamples/EHRDataPROVIDER_001 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/CEDRICExamples/EHRDataPROVIDER_001">
+        <www:hasJoiningAttribute rdf:resource="http://www.semanticweb.org/CEDRIC/provider_id"/>
+        <CEDRIC:hasFilterRule rdf:resource="http://www.semanticweb.org/CEDRIC/CaseSiteSpec"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRICExamples/EHRDataVISIT_OCCURRENCE_001 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/CEDRICExamples/EHRDataVISIT_OCCURRENCE_001">
+        <www:hasJoiningAttribute rdf:resource="http://www.semanticweb.org/CEDRIC/person_id"/>
+        <www:hasJoiningAttribute rdf:resource="http://www.semanticweb.org/CEDRIC/visit_occurrence_id"/>
+        <CEDRIC:hasFilterRule rdf:resource="http://www.semanticweb.org/CEDRIC/CaseSiteSpec"/>
+        <CEDRIC:hasFilterRule rdf:resource="http://www.semanticweb.org/CEDRIC/VisitEndDate"/>
+        <CEDRIC:hasFilterRule rdf:resource="http://www.semanticweb.org/CEDRIC/VisitStartDate"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRICExamples/MeasurementDateFilter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRICExamples/MeasurementDateFilter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/ComparisonFilter"/>
+        <CEDRIC:hasDataElement rdf:resource="http://www.semanticweb.org/CEDRIC/measurement_date"/>
+        <CEDRIC:hasPeriod rdf:resource="http://www.semanticweb.org/CEDRIC/TimeInterval20180101To20221231"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/CEDRICExamples/NOTEnote_date_001 -->
 
     <rdf:Description rdf:about="http://www.semanticweb.org/CEDRICExamples/NOTEnote_date_001">
-        <CEDRIC:hasFilterRule rdf:resource="http://www.semanticweb.org/CEDRICExamples/TimeIntervalFilter001"/>
+        <CEDRIC:hasFilterRule rdf:resource="http://www.semanticweb.org/CEDRICExamples/MeasurementDateFilter"/>
     </rdf:Description>
     
 
@@ -223,15 +399,6 @@ Notes associated with the Episodes of care</CEDRIC:hasObjective>
     
 
 
-    <!-- http://www.semanticweb.org/CEDRICExamples/TimeIntervalFilter001 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRICExamples/TimeIntervalFilter001">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/ComparisonFilter"/>
-        <CEDRIC:hasPeriod rdf:resource="http://www.semanticweb.org/CEDRIC/TimeInterval20180101To20221231"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/CEDRICExamples/WestSydneyUniversity -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRICExamples/WestSydneyUniversity">
@@ -241,5 +408,5 @@ Notes associated with the Episodes of care</CEDRIC:hasObjective>
 
 
 
-<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 

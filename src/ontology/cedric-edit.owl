@@ -4,12 +4,15 @@
      xmlns:dce="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:www="http://www.semanticweb.org/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:dcterms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://www.semanticweb.org/CEDRIC">
+        <owl:imports rdf:resource="http://www.semanticweb.org/CEDRIC/OMOP"/>
         <dcterms:description>Ontology for the CEDRIC project</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <dcterms:title>CEDRIC ontology</dcterms:title>
@@ -52,6 +55,12 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -60,6 +69,15 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.semanticweb.org/hasJoiningAttribute -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hasJoiningAttribute">
+        <rdfs:comment>The list of attributes that are used to join data in different tables</rdfs:comment>
+        <skos:prefLabel xml:lang="en">hasJoiningAttributes</skos:prefLabel>
+    </owl:ObjectProperty>
     
 
 
@@ -112,6 +130,12 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CEDRIC/hasCollectionElement">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/CEDRIC/Collection"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRIC/hasComparisonOperator -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CEDRIC/hasComparisonOperator"/>
     
 
 
@@ -772,8 +796,13 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/CEDRIC/table">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/CEDRIC/dataElementDataProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CEDRIC/value -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/CEDRIC/value"/>
     
 
 
@@ -2962,6 +2991,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/CEDRIC/measurement_time_selection_12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRIC/measurement_time_selection_12"/>
+    
+
+
     <!-- http://www.semanticweb.org/CEDRIC/measurement_type_concept_id -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRIC/measurement_type_concept_id">
@@ -3819,10 +3854,12 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRICExamples/EHRDataMEASUREMENT_001">
         <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/EHRDataCollection"/>
+        <www:hasJoiningAttribute rdf:resource="http://www.semanticweb.org/CEDRIC/person_id"/>
+        <www:hasJoiningAttribute rdf:resource="http://www.semanticweb.org/CEDRIC/visit_occurrence_id"/>
+        <hasCollectionElement rdf:resource="http://www.semanticweb.org/CEDRIC/measurement_time_selection_12"/>
         <hasCollectionElement rdf:resource="http://www.semanticweb.org/CEDRICExamples/MEASUREMENTmeasurement_concept_id_001"/>
         <hasCollectionElement rdf:resource="http://www.semanticweb.org/CEDRICExamples/MEASUREMENTmeasurement_id_001"/>
         <hasCollectionElement rdf:resource="http://www.semanticweb.org/CEDRICExamples/MEASUREMENTmeasurment_date_001"/>
-        <hasCollectionElement rdf:resource="http://www.semanticweb.org/CEDRICExamples/MEASUREMENTmeasurment_time_001"/>
         <hasCollectionElement rdf:resource="http://www.semanticweb.org/CEDRICExamples/MEASUREMENTperson_id_001"/>
         <hasCollectionElement rdf:resource="http://www.semanticweb.org/CEDRICExamples/MEASUREMENTprovider_id_001"/>
         <hasCollectionElement rdf:resource="http://www.semanticweb.org/CEDRICExamples/MEASUREMENTrange_high_001"/>
@@ -3840,6 +3877,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CEDRICExamples/EHRDataNOTE_001">
         <rdf:type rdf:resource="http://www.semanticweb.org/CEDRIC/EHRDataCollection"/>
+        <www:hasJoiningAttribute rdf:resource="http://www.semanticweb.org/CEDRIC/person_id"/>
+        <www:hasJoiningAttribute rdf:resource="http://www.semanticweb.org/CEDRIC/provider_id"/>
+        <www:hasJoiningAttribute rdf:resource="http://www.semanticweb.org/CEDRIC/visit_occurrence_id"/>
         <hasCollectionElement rdf:resource="http://www.semanticweb.org/CEDRICExamples/NOTEnote_class_concept_id_001"/>
         <hasCollectionElement rdf:resource="http://www.semanticweb.org/CEDRICExamples/NOTEnote_date_001"/>
         <hasCollectionElement rdf:resource="http://www.semanticweb.org/CEDRICExamples/NOTEnote_text_001"/>
@@ -4214,5 +4254,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
